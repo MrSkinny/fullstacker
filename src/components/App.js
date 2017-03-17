@@ -28,6 +28,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
+                <h2>Looking for cheese?</h2>
                 <label htmlFor="searchTerm">Filter:</label>
                 <input id="searchTerm" onChange={this.handleChange} type="text" value={this.state.inputField} />
                 <CheeseList cheeses={this.state.filteredCheeses || this.props.cheeses} />
