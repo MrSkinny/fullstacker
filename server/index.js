@@ -2,14 +2,12 @@ import path from 'path';
 import express from 'express';
 import { cheeseRoutes } from './routes';
 
-const buildPath = () => {
-    return process.env.NODE_ENV !== 'production' ?
-        path.join(__dirname, '../build') :
-        path.join(__dirname, 'build'); 
-}
+const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.static(buildPath()));
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'public')));
+}
 app.use('/cheeses', cheeseRoutes);
 
-app.listen(3001, () => console.log('Server on 3001'));
+app.listen(PORT, () => console.log(`Server on ${PORT}`));

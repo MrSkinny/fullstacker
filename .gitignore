@@ -8,6 +8,7 @@
 
 # production
 /build
+/fsbuild
 
 # misc
 .DS_Store
