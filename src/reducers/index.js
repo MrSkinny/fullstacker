@@ -1,3 +1,1 @@
-import cheeseReducer from './cheeseReducer';
-
-export { cheeseReducer };
+export default () => ({});
