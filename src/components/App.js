@@ -32,6 +32,7 @@ class App extends Component {
                 <label htmlFor="searchTerm">Filter:</label>
                 <input id="searchTerm" onChange={this.handleChange} type="text" value={this.state.inputField} />
                 <CheeseList cheeses={this.state.filteredCheeses || this.props.cheeses} />
+                {this.props.children}
             </div>
         );
     }

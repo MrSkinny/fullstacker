@@ -1,3 +1,4 @@
+import cuid from 'cuid';
 import { Router } from 'express';
 
 const CHEESES = [
@@ -20,10 +21,12 @@ const CHEESES = [
     "Yorkshire Blue"
 ];
 
+const cheeseData = CHEESES.map(c => ({ id: cuid(), name: c }));
+
 const cheeseRoutes = Router();
 
 cheeseRoutes.get('/', (req, res) => {
-    res.json(CHEESES);
+    res.json(cheeseData);
 });
 
 export { cheeseRoutes };
