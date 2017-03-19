@@ -16,12 +16,16 @@
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-stage-1": "^6.22.0",
     "concurrently": "^3.4.0",
     "eslint": "^3.18.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
+    "nodemon": "^1.11.0",
     "react-scripts": "0.9.5"
   },
   "scripts": {
@@ -37,5 +41,5 @@
     "server:build": "mkdir -p fsbuild/deploy && babel server --out-dir fsbuild/deploy",
     "clean": "rm -rf fsbuild/deploy"
   },
-  "proxy": "http://localhost:3001"
+  "proxy": "https://localhost:3001"
 }

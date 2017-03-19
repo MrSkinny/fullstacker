@@ -5,6 +5,7 @@ This repo utilizes `create-react-app` and includes a simple Node/Express server 
 * `npm install`
 * `npm start` - runs server and client
 
+Client runs on default `create-react-app` port (3000). Server runs on `process.env.PORT` or 3001 by default. The `package.json` includes a `proxy` key set to `localhost:3001` which allows dev mode client-side requests to be made without a hostname. You must change the proxy if using non-default ports. 
 #### Build and Deploy Instructions
 * `npm run build:all` - build client and server into `fsbuild/deploy`
 
